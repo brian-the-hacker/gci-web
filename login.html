@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="form-box login">
+            <div class="info-text">
+                <h2>Welcome Back, Admin!</h2>
+                <p>Login with your admin account details to continue.</p>
+            </div>
+            <div class="register">
+                <form id="loginForm" method="POST" action="{{ url_for('login') }}">
+                    {{ form.hidden_tag() }} <!-- CSRF token -->
+                    <h2>Login</h2>
+                    <div class="input-group">
+                        <input type="text" name="username" required>
+                        <label>Username</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="password" name="password" required>
+                        <label>Password</label>
+                    </div>
+                    <button type="submit" class="submit-btn">Login</button>
+                    <div class="login-register">
+                        <p>Don't have an account? <a href="register" class="create_password">Sign Up</a></p>
+                        <p>I forgot my password? <a href="{{ url_for('register') }}" class="create_password">Click here</a></p>
+
+                    </div>
+                </form>
+            </div>
+            {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                <div class="flash-messages">
+                    {% for category, message in messages %}
+                        <div class="{{ category }}">{{ message }}</div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+            {% endwith %}
+        </div>
+    </div>
+    
+</body>
+</html>

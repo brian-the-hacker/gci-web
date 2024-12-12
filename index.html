@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gospel Centers International</title>
+    <link rel="stylesheet" href="static/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <div class="top-bar">
+            <div class="container">
+                <div class="contact-info">
+                    <span>
+                        <a href="tel:+254735244773" style="color: inherit; text-decoration: none;">
+                            <i class="fas fa-phone-alt"></i> Call Us: +254735244773
+                        </a>
+                    </span>
+                    <span>
+                        <a href="mailto:info@gcimachakos.org" style="color: inherit; text-decoration: none;">
+                            <i class="fas fa-envelope"></i> Email: info@gcimachakos.org
+                        </a>
+                    </span>
+                </div>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/GCIMachakos/" class="facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="https://x.com/gci_machakos" class="twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="youtube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <nav class="navbar">
+            <div class="container">
+                <h1 class="logo-container">
+                    <img src="static/images/Gospel-logo.png" alt="Gospel Centers International Machakos" style="height: 100px;"> <!-- Adjust height as needed -->
+                    <span class="logo-text">GCI Machakos</span>
+                </h1>
+                <ul class="nav-links">
+                    <li><a href="{{ url_for('index') }}">Home</a></li>
+                    <li><a href="{{ url_for('contact') }}">Contact Us</a></li>
+                    <li><a href="{{ url_for('about') }}">About</a></li>
+                    <li><a href="{{ url_for('events') }}">Events</a></li>
+                    <li><a href="{{ url_for('gallery') }}">gallery</a></li>
+                    <li><a href="{{ url_for('giving') }}">giving</a></li>
+                    <li><a href="{{ url_for('donate') }}">donation</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    
+        <!-- Hero Section with inline background image -->
+    <!-- carousel -->
+    <div class="carousel">
+        <!-- list item -->
+        <div class="list">
+            <div class="item">
+                <img src="static/images/Joseyphotos_27.jpg">
+                <div class="content">
+                    <div class="title">Evangelism | Discipleship  Leadership</div>
+                    <div class="des">
+                        <!-- lorem 50 -->
+                        Welcome to Gospel Centers International Machakos a family church, where the great commission is fulfilled with Excellence
+                    </div>
+                    <div class="buttons">
+                        <a href="#" class="btn">Get Involved</a>
+                        <a href="#" class="btn">New Here</a>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="item">
+                <img src="static/images/Joseyphotos_36.jpg">
+                <div class="content">
+                    <div class="title">Evangelism | Discipleship  Leadership</div>
+                    <div class="des">
+                        Welcome to Gospel Centers International Machakos a family church, where the great commission is fulfilled with Excellence
+                    </div>
+                    <div class="buttons">
+                        <a href="#" class="btn">Get Involved</a>
+                        <a href="#" class="btn">New Here</a>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="static/images/Joseyphotos_27 (1).jpg">
+                <div class="content">
+                    <div class="title">Evangelism | Discipleship  Leadership</div>
+                    <div class="des">
+                        Welcome to Gospel Centers International Machakos a family church, where the great commission is fulfilled with Excellence
+                    </div>
+                    <div class="buttons">
+                        <a href="#" class="btn">Get Involved</a>
+                        <a href="#" class="btn">New Here</a>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="static/images/Joseyphotos.jpg">
+                <div class="content">
+                    <div class="title">Evangelism | Discipleship  Leadership</div>
+                    <div class="des">
+                        Welcome to Gospel Centers International Machakos a family church, where the great commission is fulfilled with Excellence
+                    </div>
+                    <div class="buttons">
+                        <a href="#" class="btn">Get Involved</a>
+                        <a href="#" class="btn">New Here</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- list thumnail -->
+        <div class="thumbnail">
+            <div class="item">
+                <img src="static/images/Joseyphotos_27.jpg">
+                <div class="content">
+                    <div class="title">
+                        
+                    </div>
+                    <div class="description">
+                       
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="static/images/Joseyphotos_36.jpg">
+                <div class="content">
+                    <div class="title">
+                        
+                    </div>
+                    <div class="description">
+                       
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="static/images/Joseyphotos_27 (1).jpg">
+                <div class="content">
+                    <div class="title">
+                        
+                    </div>
+                    <div class="description">
+                       
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="static/images/Joseyphotos.jpg">
+                <div class="content">
+                    <div class="title">
+                        
+                    </div>
+                    <div class="description">
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- next prev -->
+
+        <div class="arrows">
+            <button id="prev"><</button>
+            <button id="next">></button>
+        </div>
+        <!-- time running -->
+        <div class="time"></div>
+    </div>
+            
+        <!-- Gallery Section -->
+
+            <!-- Add more thumbnails as needed -->
+        </div>
+    </div>
+</section>
+
+        <!-- Welcome Section -->
+        <div class="container">
+            <div class="welcome-section">
+                <div class="welcome-text">
+                    <h1>
+                        <span class="highlight1">A Warm Welcome to  Gospel </span>
+                        <span class="highlight2">Centers International Machakos</span>
+                    </h1>
+                    <div class="accordion">
+                        <div class="accordion-item">
+                            <button class="accordion-button">A Warm Welcome <i class="fas fa-chevron-down"></i></button>
+                            <div class="content">
+                                <p>Welcome to our church, where we strive to transform lives through the power of the gospel.</p>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <button class="accordion-button">Our Vision <i class="fas fa-chevron-down"></i></button>
+                            <div class="content">
+                                <p>The Great Commission Fulfilled with Excellence.</p>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <button class="accordion-button">Our Mission <i class="fas fa-chevron-down"></i></button>
+                            <div class="content">
+                                <p>An International Church that excels in Evangelizing the World, Discipling Believers and Raising Leaders.</p>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <button class="accordion-button">Our 2024 Theme <i class="fas fa-chevron-down"></i></button>
+                            <div class="content">
+                                <p>Our theme for 2024 is "Building Capacity For Growth; Isaiah:54:2."</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-container">
+                    <div class="card">
+                        <div class="card-img">
+                            <img src="static/images/rev joseph.png" alt="Miller">
+                        </div>
+                        <div class="card-info">
+                            <h2 class="card-name">Rev Joseph Musila</h2>
+                            <p class="card-role">Lead Pastor-GCI Machakos</p>
+                            <p class="card-email">musilajoseph@gmail.com</p>
+                            <button class="button" id="contactBtn">Contact</button>
+                        </div>
+                </div>
+                <div id="contactModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <h2>Contact Information</h2>
+                        <p><strong>Email:</strong> musilajoseph@gmail.com</p>
+                        <p><strong>Phone:</strong> +254735244773</p>
+                        <p><strong>Facebook:</strong> Joseph Musila</p>
+                        <p><strong>Twitter:</strong> @Joseph_Musila</p>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="card">
+                    <div class="card-img">
+                        <img src="static/images/pst kilonzo.png" alt="Joe">
+                    </div>
+                    <div class="card-info">
+                        <h2 class="card-name">Pst Joseph Kilonzo</h2>
+                        <p class="card-role">Assistant Pastor-GCI Machakos</p>
+                        <p class="card-email">brian@example.com</p>
+                        <button class="button">Contact</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+            </div>
+        </div>
+        
+
+        <!-- Events Section -->
+        <section class="events-section">
+            <div class="container">
+                <h2>Upcoming Events</h2>
+                <!-- Event Cards or List -->
+                <div class="event-card">
+                    <h3>Anniversary of Gospel Centers International Machakos</h3>
+                    <p>Date: July 15, 2024</p>
+                    <p>Location: Gospel Centers International Machakos</p>
+                    <a href="events" class="btn">Learn More</a>
+                </div>
+                <!-- Repeat for other events -->
+            </div>
+        </section>
+
+        <!-- News Section -->
+        <section class="news-section">
+            <div class="container">
+                <h2>join us</h2>
+                <!-- News Cards or List -->
+                <div class="news-card">
+                    <p>A worshipping community of the Lord Jesus Christ that is advancing the kingdom <br> of God through the power of the Holy Spirit.</p>
+                    <a href="#" class="btn">Read More</a>
+                </div>
+                <!-- Repeat for other news items -->
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h2>Contact <span>Us Today!</span></h2>
+                    <p>Feel free to call us, visit our premise or write to us. Thank you</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <p>@ katheka kai, Near katheka kai secondary school.</p>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone-alt"></i>
+                            <p> +254735244773 / +254735244773</p>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <p> info@gcimachakos.org</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="flash-messages"></div> <!-- Flash message container -->
+    
+                    <div class="contact-form">
+                        <form id="contact-form" action="/submit_form" method="POST">
+                            <input type="hidden" name="csrf_token" id="csrf_token" value="{{ csrf_token() }}">
+                            <input type="text" name="name" placeholder="Your Name (required)" required>
+                            <input type="email" name="email" placeholder="Your Email (required)" required>
+                            <textarea name="message" placeholder="Your Message" required></textarea> 
+                            <button type="submit">SEND</button>
+                            <!-- Loading message -->
+                            <div id="loadingMessage" style="display: none; color: blue;">
+                                Sending message...
+                            </div>
+                        </form>
+                    </div>
+                    
+                    <!-- JavaScript to handle form submission -->
+                    <script>
+                        document.getElementById('contact-form').addEventListener('submit', function(e) {
+                            // Show the loading message
+                            document.getElementById('loadingMessage').style.display = 'block';
+                        });
+                    </script>
+                    
+                </div>
+            </div>
+        </section>
+    </main>
+    
+<!-- Footer -->
+<footer class="site-footer">
+    <div class="footer-top">
+        <div class="footer-column">
+            <h4>About Us</h4>
+            <p>
+                Welcome to our church website, where we fulfill the great commission with excellence. We aim to spread the message of love and faith to the world.
+            </p>
+        </div>
+
+        <div class="footer-column">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Events</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Donate</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-column">
+            <h4>Contact Us</h4>
+            <p><strong>Address:</strong> @ katheka kai, Near katheka kai secondary school.</p>
+            <p><strong>Email:</strong> info@gcimachakos.org</p>
+            <p><strong>Phone:</strong> +254735244773 </p>
+        </div>
+
+        <div class="footer-column">
+            <h4>Follow Us</h4>
+            <div class="social-icon">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+
+        <!-- New Services Section -->
+        <div class="footer-section services">
+            <h3>Our Services</h3>
+            <ul>
+                <li>Sunday Services:</li>
+                <li>1st Service – 9:00 AM – 10:00 AM</li>
+                <li>2nd Service – 10:00 AM – 11:30 AM</li>
+                <li>Tuesday Service – 6:00 PM – 7:30 PM</li>
+                <li>Wednesday Fellowships – 6:00 PM – 7:30 PM</li>
+                <li>Friday Corporate Prayers – 6:00 PM – 7:30 PM</li>
+            </ul>
+        </div>
+
+        <!-- New Subscribe Section -->
+        <div class="footer-section newsletter">
+            <h3>Subscribe to our Newsletter</h3>
+            <p>Stay updated with our latest news and events. Enter your email below to subscribe:</p>
+            <form id="subscribe-form" action="/Subscribe" method="POST">
+                <input type="hidden" name="csrf_token" id="csrf_token" value="{{ csrf_token() }}">
+                <input type="email" name="email" placeholder="Enter your email" required>
+                <button type="submit">Subscribe</button>
+                <div id="loadingMessage" style="display: none; color: blue;">
+                    Sending message...
+                </div>
+            </form>
+            <div id="response-message" style="margin-top: 10px;"></div> <!-- Placeholder for response message -->
+        </div>
+        
+        <!-- Include jQuery -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script>
+        $(document).ready(function() {
+            $('#subscribe-form').on('submit', function(event) {
+                event.preventDefault(); // Prevent the default form submission
+        
+                // Show loading message
+                $('#loadingMessage').show();
+        
+                $.ajax({
+                    url: $(this).attr('action'), // Use the form's action attribute
+                    type: 'POST',
+                    data: $(this).serialize(), // Serialize the form data
+                    success: function(response) {
+                        $('#loadingMessage').hide(); // Hide loading message
+                        $('#response-message').html(response.message); // Display the response message
+                    },
+                    error: function(xhr) {
+                        $('#loadingMessage').hide(); // Hide loading message
+                        $('#response-message').html('<span style="color: red;">Failed to subscribe. Please try again later.</span>');
+                    }
+                });
+            });
+        });
+        </script>    
+        
+        
+        <script>
+            document.getElementById('subscribe-form').addEventListener('submit', function() {
+                // Show the loading message when the form is submitted
+                document.getElementById('loadingMessage').style.display = 'block';
+            });
+        </script>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2024 Gospel Centers International Machakos Church. All Rights Reserved.</p>
+        <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+        </ul>
+    </div>
+</footer>
+<!-- Footer -->
+
+ 
+    <!-- Back to Top Button -->
+    <button id="backToTopBtn" title="Go to top"><i class="fas fa-arrow-up"></i></button>
+    
+    <!-- GSAP Animation Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="static/js/utils.js"></script>
+    <script src="static/css/model.js"></script>
+    <script src='static/css/index.js'></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        //step 1: get DOM
+
+        let nextDom = document.getElementById('next');
+        let prevDom = document.getElementById('prev');
+
+        let carouselDom = document.querySelector('.carousel');
+        let SliderDom = carouselDom.querySelector('.carousel .list');
+        let thumbnailBorderDom = document.querySelector('.carousel .thumbnail');
+        let thumbnailItemsDom = thumbnailBorderDom.querySelectorAll('.item');
+        let timeDom = document.querySelector('.carousel .time');
+
+        thumbnailBorderDom.appendChild(thumbnailItemsDom[0]);
+        let timeRunning = 3000;
+        let timeAutoNext = 10000;
+
+        nextDom.onclick = function(){
+            showSlider('next');    
+        }
+
+        prevDom.onclick = function(){
+            showSlider('prev');    
+        }
+        let runTimeOut;
+        let runNextAuto = setTimeout(() => {
+            next.click();
+        }, timeAutoNext)
+        function showSlider(type){
+            let  SliderItemsDom = SliderDom.querySelectorAll('.carousel .list .item');
+            let thumbnailItemsDom = document.querySelectorAll('.carousel .thumbnail .item');
+            
+            if(type === 'next'){
+                SliderDom.appendChild(SliderItemsDom[0]);
+                thumbnailBorderDom.appendChild(thumbnailItemsDom[0]);
+                carouselDom.classList.add('next');
+            }else{
+                SliderDom.prepend(SliderItemsDom[SliderItemsDom.length - 1]);
+                thumbnailBorderDom.prepend(thumbnailItemsDom[thumbnailItemsDom.length - 1]);
+                carouselDom.classList.add('prev');
+            }
+            clearTimeout(runTimeOut);
+            runTimeOut = setTimeout(() => {
+                carouselDom.classList.remove('next');
+                carouselDom.classList.remove('prev');
+            }, timeRunning);
+
+            clearTimeout(runNextAuto);
+            runNextAuto = setTimeout(() => {
+                next.click();
+            }, timeAutoNext)
+        }
+        $(document).ready(function() {
+            $('#contact-form').on('submit', function(event) {
+                event.preventDefault(); // Prevent the default form submission
+        
+                // Collect form data
+                var formData = $(this).serialize();
+        
+                $.ajax({
+                    url: $(this).attr('action'), // URL to submit the form data
+                    type: 'POST',
+                    data: formData,
+                    success: function(response) {
+                        console.log('Form submitted successfully:', response);
+        
+                        // Assuming the response has a message field
+                        var message = response.message || 'Message sent successfully! Thank you for contacting Gospel Centers International Machakos..';
+                        
+                        // Hide the form
+                        $('#contact-form').hide();
+        
+                        // Display success message
+                        $('.flash-messages').html('<ul class="flashes"><li class="success">' + message + '</li></ul>');
+                    },
+                    error: function(xhr, status, error) {
+                        console.error('Form submission failed:', status, error);
+        
+                        // Display error message
+                        $('.flash-messages').html('<ul class="flashes"><li class="error">Failed to send the message. Please try again later.</li></ul>');
+                    }
+                });
+            });
+        });
+        
+    </script>
+</body>
+</html>

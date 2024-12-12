@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard</title>
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css') }}">
+</head>
+<body>
+  <!-- Sidebar Start -->
+  <div class="sidebar">
+    <a href="#" class="logo">
+      <img src="{{ url_for('static', filename='images/Gospel-logo.png') }}" alt="GCI Machakos Logo" />
+      <span>gci</span><span>machakos</span>
+    </a>
+    <ul class="side-menu">
+        <li>
+            <a href="{{ url_for('gallery') }}">
+              <i class="bx bx-video"></i>
+              <span>Content</span>
+            </a>
+        </li>
+        <li>
+          <a href="{{ url_for('uploads.create_post') }}">
+            <i class="bx bx-edit"></i>
+            <span>Post Content</span>
+          </a>
+        </li>
+        <li>
+            <a href="{{ url_for('index') }}">
+              <i class="bx bx-home"></i>
+              <span>Go to Home</span>
+            </a>
+        </li>
+    </ul>    
+  </div>
+  <!-- Sidebar Close -->
+
+  <!-- Content Start -->
+  <div class="content">
+    <nav>
+      <i class="bx bx-menu"></i>
+      <div class="post-count">
+        <h2>Total Posts: {{ latest_content_count }}</h2>
+      </div>
+      <a href="#" class="profile">
+        <img src="{{ url_for('static', filename='images/Gospel-logo.png') }}" alt="Profile Image" />
+      </a>
+    </nav>
+
+    <!-- Main Start -->
+    <main>
+      <div class="header">
+        <h1>Photos</h1>
+        <ul class="breadcrumb">
+          <li><a href="#" class="active">Analytics</a></li>
+          <li>/</li>
+          <li><a href="#">Gallery</a></li>
+        </ul>
+      </div>
+
+      <!-- Gallery Start -->
+      <div class="gallery">
+        {% for content in recent_content %}
+        <div class="gallery-item">
+          <img src="{{ url_for('uploaded_file', filename=content.image_url) }}" alt="{{ content.title }}">
+          <form action="{{ url_for('delete_post', filename=content.image_url) }}" method="POST">
+            {{ form.hidden_tag() }} 
+            <button type="submit" class="delete-button">Delete</button>
+          </form>
+        </div>
+        {% endfor %}
+      </div>
+      <!-- Gallery Close -->
+    </main>
+    <!-- Main Close -->
+  </div>
+  <!-- Content Close -->
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+  <script ></script>
+  <script>
+    window.addEventListener('beforeunload', function (e) {
+        // Perform logout by calling the logout route
+        navigator.sendBeacon('/logout'); // Sends a logout request on tab close
+    });
+  </script>
+
+</body>
+</html>
