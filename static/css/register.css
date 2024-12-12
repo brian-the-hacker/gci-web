@@ -1,0 +1,227 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #1a1a1a;
+    padding: 20px;
+}
+
+.wrapper {
+    position: relative;
+    width: 750px;
+    height: 450px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.form-box {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.info-text {
+    position: relative;
+    width: 45%;
+    height: 100%;
+    background: #000;
+    clip-path: polygon(0 0, 100% 0, 85% 100%, 0 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px;
+    color: #fff;
+    z-index: 1;
+    transition: all 0.5s ease-in-out;
+}
+
+.info-text h2 {
+    font-size: 2.2em;
+    margin-bottom: 15px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.5s forwards;
+}
+
+.info-text p {
+    font-size: 0.9em;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.5s 0.2s forwards;
+}
+
+.register {
+    position: relative;
+    width: 55%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    margin-left: -5%;
+}
+
+.register form {
+    width: 100%;
+    max-width: 320px;
+    opacity: 0;
+    transform: translateX(20px);
+    animation: fadeInRight 0.5s 0.3s forwards;
+}
+
+.register h2 {
+    font-size: 1.8em;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.input-group {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 20px 0;
+}
+
+.input-group input {
+    width: 100%;
+    height: 100%;
+    padding: 10px 0;
+    border: none;
+    border-bottom: 2px solid #e6e6e6;
+    outline: none;
+    font-size: 1em;
+    transition: 0.3s;
+    background: transparent;
+}
+
+.input-group label {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1em;
+    pointer-events: none;
+    color: #999;
+    transition: 0.3s;
+}
+
+.input-group input:focus,
+.input-group input:valid {
+    border-bottom-color: #000;
+}
+
+.input-group input:focus ~ label,
+.input-group input:valid ~ label {
+    top: -5px;
+    font-size: 0.8em;
+    color: #000;
+}
+
+.submit-btn {
+    width: 100%;
+    height: 45px;
+    background: #000;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 1em;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 20px;
+}
+
+.submit-btn:hover {
+    background: #333;
+}
+
+.login-register {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9em;
+}
+
+.login-register p a {
+    color: #000;
+    text-decoration: none;
+    font-weight: 600;
+    margin-left: 5px;
+}
+
+.login-register p a:hover {
+    text-decoration: underline;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Form switch animations */
+.form-box.signup .info-text h2,
+.form-box.signup .info-text p {
+    animation: fadeInUp 0.5s forwards;
+}
+
+.form-box.signup .register form {
+    animation: fadeInRight 0.5s forwards;
+}
+
+/* Mode switch styles */
+.form-box.signup .info-text h2 {
+    content: "Hello, Friend!";
+}
+
+.form-box.signup .info-text p {
+    content: "Begin your journey with us by creating your personal account.";
+}
+
+.form-box.signup .register h2 {
+    content: "Sign Up";
+}
+
+.form-box.signup .submit-btn {
+    content: "Sign Up";
+}
+
+/* Reset animations on mode switch */
+.form-box.signup .info-text *,
+.form-box.login .info-text * {
+    opacity: 0;
+}
+
+.form-box.signup .register form,
+.form-box.login .register form {
+    opacity: 0;
+}

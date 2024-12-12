@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Gallery | GCI Machakos</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="static/css/gallery.css">
+</head>
+<body>
+    <header class="header">
+        <div class="top-bar">
+            <div class="container">
+                <div class="contact-info">
+                    <a href="tel:+254123456789" class="contact-link">
+                        <i class="fas fa-phone-alt"></i> +254 123 456 789
+                    </a>
+                    <a href="mailto:info@gcimachakos.org" class="contact-link">
+                        <i class="fas fa-envelope"></i> info@gcimachakos.org
+                    </a>
+                </div>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/GCIMachakos/" class="social-link facebook">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="https://x.com/gci_machakos" class="social-link twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="social-link instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="social-link youtube">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo-container">
+                    <img src="/static/images/Gospel-logo.png" alt="GCI Machakos" class="logo-img">
+                    <span class="logo-text">GCI Machakos</span>
+                </div>
+                <button class="nav-toggle" aria-label="Toggle navigation">
+                    <span class="hamburger"></span>
+                </button>
+                <ul class="nav-links">
+                    <li><a href="/" class="nav-link">Home</a></li>
+                    <li><a href="/contact" class="nav-link">Contact Us</a></li>
+                    <li><a href="/about" class="nav-link">About</a></li>
+                    <li><a href="/events" class="nav-link">Events</a></li>
+                    <li><a href="/gallery" class="nav-link active">Gallery</a></li>
+                    <li><a href="/giving" class="nav-link">Giving</a></li>
+                    <li><a href="/donate" class="nav-link">Donation</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <div class="gallery-header">
+                <h1 class="gallery-title">Our Gallery</h1>
+                <p class="gallery-subtitle">Capturing moments of faith, fellowship, and community</p>
+            </div>
+
+            <div class="gallery-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="events">Events</button>
+                <button class="filter-btn" data-filter="worship">Worship</button>
+                <button class="filter-btn" data-filter="community">Community</button>
+            </div>
+
+            <div class="gallery-grid">
+                {% for image in gallery_images %}
+                <div class="gallery-item" data-category="all">
+                    <div class="gallery-item-inner">
+                        <img src="{{ url_for('static', filename='uploads/' + image) }}" 
+                             alt="Gallery Image" 
+                             class="gallery-image"
+                             loading="lazy">
+                        <div class="gallery-item-overlay">
+                            <div class="overlay-content">
+                                <h3 class="image-title">{{ image.split('.')[0]|title }}</h3>
+                                <button class="view-btn">View Image</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </main>
+
+    <div class="lightbox">
+        <button class="lightbox-close" aria-label="Close lightbox">&times;</button>
+        <button class="lightbox-nav prev" aria-label="Previous image">❮</button>
+        <div class="lightbox-content">
+            <img src="" alt="Lightbox image" class="lightbox-image">
+            <div class="lightbox-caption">
+                <h3 class="lightbox-title"></h3>
+            </div>
+        </div>
+        <button class="lightbox-nav next" aria-label="Next image">❯</button>
+    </div>
+
+    <script src="static/css/gallery.js"></script>
+</body>
+</html>

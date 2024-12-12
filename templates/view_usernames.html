@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Usernames</title>
+</head>
+<body>
+    <h1>Current Admin Usernames</h1>
+    
+    {% if usernames %}
+        <ul>
+        {% for username in usernames %}
+            <li>{{ username }}</li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>No admins found.</p>
+    {% endif %}
+</body>
+</html>

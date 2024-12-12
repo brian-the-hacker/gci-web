@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Page</title>
+    <link rel="stylesheet" href="static/css/events.css"> <!-- External CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Add any necessary CSS libraries or fonts -->
+</head>
+<body>
+    <header>
+        <div class="top-bar">
+            <div class="container">
+                <div class="contact-info">
+                    <span>
+                        <a href="tel:+254123456789" style="color: inherit; text-decoration: none;">
+                            <i class="fas fa-phone-alt"></i> Call Us: +254 123 456 789
+                        </a>
+                    </span>
+                    <span>
+                        <a href="mailto:info@gcimachakos.org" style="color: inherit; text-decoration: none;">
+                            <i class="fas fa-envelope"></i> Email: info@gcimachakos.org
+                        </a>
+                    </span>
+                </div>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/GCIMachakos/" class="facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="https://x.com/gci_machakos" class="twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="youtube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <nav class="navbar">
+            <div class="container">
+                <h1 class="logo-container">
+                    <img src="static/images/Gospel-logo.png" alt="Gospel Centers International Machakos" style="height: 100px;"> <!-- Adjust height as needed -->
+                    <span class="logo-text">GCI Machakos</span>
+                </h1>
+                <ul class="nav-links">
+                    <li><a href="{{ url_for('index') }}">Home</a></li>
+                    <li><a href="{{ url_for('contact') }}">Contact Us</a></li>
+                    <li><a href="{{ url_for('about') }}">About</a></li>
+                    <li><a href="{{ url_for('events') }}">Events</a></li>
+                    <li><a href="{{ url_for('gallery') }}">gallery</a></li>
+                    <li><a href="{{ url_for('giving') }}">giving</a></li>
+                    <li><a href="{{ url_for('donate') }}">donation</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    
+    <!-- Slider Section -->
+    <section class="slider">
+        <div class="slider-content">
+            <h1>The Leading  Conference of the Year</h1>
+            <p>Join us for the event on October 2024</p>
+            <div class="slider-buttons">
+                <a href="#" class="register-btn">Register</a>
+                <a href="#" class="watch-video-btn">Watch Video</a>
+            </div>
+        </div>
+        <div class="countdown">
+            <div class="countdown-item">
+                <span>301</span> Days
+            </div>
+            <div class="countdown-item">
+                <span>06</span> Hours
+            </div>
+            <div class="countdown-item">
+                <span>13</span> Minutes
+            </div>
+            <div class="countdown-item">
+                <span>21</span> Seconds
+            </div>
+        </div>
+    </section>
+
+    <!-- Event Info Section -->
+    <section class="event-info">
+        <div class="info-box">
+            <i class="fas fa-envelope"></i>
+            <p>info@gcimachakos.org</p>
+        </div>
+        <div class="info-box">
+            <i class="fas fa-map-marker-alt"></i>
+            <p>1000 S Eighth Ave, NYC</p>
+        </div>
+        <div class="info-box">
+            <i class="fas fa-phone-alt"></i>
+            <p>+254 123 456 789</p>
+        </div>
+    </section>
+
+    <!-- Event Videos Section -->
+    <section class="event-videos">
+        <h2>Event Videos</h2>
+        <div class="video-grid">
+            <div class="video-item">
+                <img src="video1.jpg" alt="Video 1">
+                <p>October 3, 2024 - Virtual Sessions</p>
+            </div>
+            <div class="video-item">
+                <img src="video2.jpg" alt="Video 2">
+                <p>October 4, 2024 - Opening</p>
+            </div>
+            <div class="video-item">
+                <img src="video3.jpg" alt="Video 3">
+                <p>October 12, 2024- Inspiration Art</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Event Section -->
+    <section class="about-event">
+        <h2>About the Event</h2>
+        <p>
+            This event celebrates the anniversary of Gospel Centers International Machakos, bringing together believers and leaders to reflect on the church’s impact and to discuss the future of ministry, discipleship, and community outreach. Hosted by Gospel Centers International, this gathering will highlight God’s faithfulness and explore how we can continue to fulfill the Great Commission with excellence. Join us for a time of fellowship, worship, and inspiration as we look forward to the future and strengthen our commitment to advancing the Gospel.
+        </p>
+    </section>
+
+    <!-- Event Speakers Section -->
+<section class="event-speakers">
+    <h2>Meet Our Speakers</h2>
+    <div class="speakers-grid">
+        <div class="speaker-item">
+            <img src="https://media.geeksforgeeks.org/wp-content/uploads/20230824122630/business-office-business-woman-professional.jpg" alt="Speaker 1">
+            <h3>John Doe</h3>
+            <p>CEO, Nonprofit Corp</p>
+            <p class="speaker-bio">John has over 20 years of experience in the nonprofit sector and is passionate about community building.</p>
+        </div>
+        <div class="speaker-item">
+            <img src="speaker2.jpg" alt="Speaker 2">
+            <h3>Jane Smith</h3>
+            <p>Director of Outreach, Charity X</p>
+            <p class="speaker-bio">Jane specializes in outreach programs and has successfully led multiple international campaigns.</p>
+        </div>
+        <div class="speaker-item">
+            <img src="speaker3.jpg" alt="Speaker 3">
+            <h3>Mike Johnson</h3>
+            <p>Lead Developer, Code for Good</p>
+            <p class="speaker-bio">Mike is a technology expert focused on building software solutions for nonprofit organizations.</p>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Event Testimonials Section -->
+    <section class="event-testimonials">
+        <h2>What People Say</h2>
+        <div class="testimonials-grid">
+            <!-- Testimonial quotes go here -->
+        </div>
+    </section>
+
+    <!-- Event FAQs Section -->
+    <section class="event-faqs">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-items">
+            <!-- FAQ items go here -->
+        </div>
+    </section>
+
+    <section class="gallery-section">
+        <h2>Our Gallery</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="path-to-image1.jpg" alt="Gallery Image 1">
+                <div class="overlay">
+                    <h3>Image Title 1</h3>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="path-to-image2.jpg" alt="Gallery Image 2">
+                <div class="overlay">
+                    <h3>Image Title 2</h3>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="path-to-image3.jpg" alt="Gallery Image 3">
+                <div class="overlay">
+                    <h3>Image Title 3</h3>
+                </div>
+            </div>
+            <!-- Add more gallery items as needed -->
+        </div>
+    </section>
+    
+
+    <section class="contact-section">
+        <div class="contact-wrapper">
+            <div class="contact-form-section">
+                <h2>Send us a Message</h2>
+                <p> Welcome to Gospel Centers International Machakos a family church, where the great commission is fulfilled with Excellence</p>
+                
+                <form action="#" method="POST">
+                    <div class="input-group">
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <textarea id="message" name="message" rows="4" placeholder="Your Message" required></textarea>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+            
+            <div class="contact-info-section">
+                <div class="contact-info-overlay"></div> <!-- Overlay for better visibility -->
+                <h3>Contact Information</h3>
+                <p> Welcome to Gospel Centers International Machakos a family church, where the great commission is fulfilled with Excellence</p>
+                <p><strong>Address:</strong> @ katheka kai, Near katheka kai secondary school.</p>
+                <p><strong>Phone:</strong> +254 123 456 789</p>
+                <p><strong>Email:</strong> <a href="info@gcimachakos.org">info@gcimachakos.org</a></p>
+                
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/GCIMachakos/" class="facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="https://x.com/gci_machakos" class="twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="youtube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    
+
+    <!-- Event News Section -->
+    <section class="event-news">
+        <h2>Event News</h2>
+        <div class="news-grid">
+            <!-- News items go here -->
+        </div>
+    </section>
+
+    <!-- Event Plans Section -->
+    <section class="event-plans">
+        <h2>Event Plans</h2>
+        <div class="plans-grid">
+            <!-- Plans details go here -->
+        </div>
+    </section>
+
+    <!-- Event Place Section -->
+    <section class="event-place">
+        <h2>Event Location</h2>
+        <p>1000 S Eighth Ave, NYC</p>
+        <!-- Embedded Google Map or image of location -->
+    </section>
+
+   <!-- Footer -->
+<footer class="site-footer">
+    <div class="footer-top">
+        <div class="footer-column">
+            <h4>About Us</h4>
+            <p>
+                Welcome to our church website, where we fulfill the great commission with excellence. We aim to spread the message of love and faith to the world.
+            </p>
+        </div>
+
+        <div class="footer-column">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Events</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Donate</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-column">
+            <h4>Contact Us</h4>
+            <p><strong>Address:</strong> @ katheka kai, Near katheka kai secondary school.</p>
+            <p><strong>Email:</strong> conference@eventor.com</p>
+            <p><strong>Phone:</strong> +254 722 127 903 </p>
+        </div>
+
+        <div class="footer-column">
+            <h4>Follow Us</h4>
+            <div class="social-icon">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+
+        <!-- New Services Section -->
+        <div class="footer-section services">
+            <h3>Our Services</h3>
+            <ul>
+                <li>Sunday Services:</li>
+                <li>1st Service – 9:00 AM – 10:00 AM</li>
+                <li>2nd Service – 10:00 AM – 11:30 AM</li>
+                <li>Tuesday Service – 6:00 PM – 7:30 PM</li>
+                <li>Wednesday Fellowships – 6:00 PM – 7:30 PM</li>
+                <li>Friday Corporate Prayers – 6:00 PM – 7:30 PM</li>
+            </ul>
+        </div>
+        <div class="footer-section newsletter">
+            <h3>Subscribe to our Newsletter</h3>
+            <p>Stay updated with our latest news and events. Enter your email below to subscribe:</p>
+            <form id="subscribe-form" action="/Subscribe" method="POST">
+                <input type="hidden" name="csrf_token" id="csrf_token" value="{{ csrf_token() }}">
+                <input type="email" name="email" placeholder="Enter your email" required>
+                <button type="submit">Subscribe</button>
+                <div id="loadingMessage" style="display: none; color: blue;">
+                    Sending message...
+                </div>
+            </form>
+            <div id="response-message" style="margin-top: 10px;"></div> <!-- Placeholder for response message -->
+        </div>
+        
+        <!-- Include jQuery -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script>
+        $(document).ready(function() {
+            $('#subscribe-form').on('submit', function(event) {
+                event.preventDefault(); // Prevent the default form submission
+        
+                // Show loading message
+                $('#loadingMessage').show();
+        
+                $.ajax({
+                    url: $(this).attr('action'), // Use the form's action attribute
+                    type: 'POST',
+                    data: $(this).serialize(), // Serialize the form data
+                    success: function(response) {
+                        $('#loadingMessage').hide(); // Hide loading message
+                        $('#response-message').html(response.message); // Display the response message
+                    },
+                    error: function(xhr) {
+                        $('#loadingMessage').hide(); // Hide loading message
+                        $('#response-message').html('<span style="color: red;">Failed to subscribe. Please try again later.</span>');
+                    }
+                });
+            });
+        });
+        </script>    
+            </form>
+        </div>
+        
+        <script>
+            document.getElementById('subscribe-form').addEventListener('submit', function() {
+                // Show the loading message when the form is submitted
+                document.getElementById('loadingMessage').style.display = 'block';
+            });
+        </script>
+        
+      </div>
+    
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2024  Gospel Centers International Machakos Church. All Rights Reserved.</p>
+        <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+        </ul>
+    </div>
+</footer>
+    
+
+</body>
+</html>

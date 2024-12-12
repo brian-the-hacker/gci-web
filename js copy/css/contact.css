@@ -1,0 +1,232 @@
+/* Reset some default styles */
+body, h1, h2, h3, p, ul, li, form {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Georgia;
+    font-weight: bold;
+}
+
+/* General Body Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    line-height: 1.6;
+}
+
+/* Header Styles */
+header {
+    background: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul.nav-links {
+    display: flex;
+    justify-content: center;
+}
+
+nav ul.nav-links li {
+    margin: 0 15px;
+}
+
+nav ul.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul.nav-links a:hover {
+    text-decoration: underline;
+}
+
+/* Contact Header Styles */
+.contact-header {
+    background-image: url("https://cdn.pixabay.com/photo/2020/10/01/11/07/hands-5618240_1280.jpg");
+    color: #fff;
+    text-align: center;
+    padding: 40px 0;
+}
+
+.contact-header h1 {
+    font-size: 36px;
+}
+
+/* Contact Info Section Styles */
+.contact-info {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    background: #fff;
+}
+
+.info-box {
+    flex: 1;
+    text-align: center;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin: 0 10px;
+}
+
+.info-box i {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.info-box h3 {
+    margin-bottom: 10px;
+}
+
+/* Contact Form Section Styles */
+.contact-section {
+    box-shadow: 0 0 5px cyan, 0 0 25px cyan;
+    background: #fff;
+    padding: 20px;
+    border-radius: 80px;
+   
+    margin: 20px auto;
+    max-width: 700px;
+    height: 450px;
+}
+
+.container {
+    width: 70%;
+    margin: auto;
+}
+
+.section-title {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.section-description {
+    margin-bottom: 10px;
+  
+}
+
+.form-group {
+    margin-bottom: 5px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-group input, .form-group textarea {
+    width: 50%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.form-group textarea {
+    resize: vertical;
+    width: 100%;
+    height: 100px;
+}
+
+.required {
+    color: red;
+}
+
+.btn {
+    background: #8ed1fc;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btn:hover {
+    box-shadow: 0 0 5px cyan, 0 0 25px cyan;
+    
+}
+
+/* Map Section Styles */
+.map {
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+.map iframe {
+    width: 100%;
+    height: 300px;
+    border: 0;
+    border-radius: 5px;
+}
+
+/* Footer Styles */
+footer {
+    background-image: url("https://cdn.pixabay.com/photo/2020/10/01/11/07/hands-5618240_1280.jpg");
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    border-top: 1px solid #ccc;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    flex: 1;
+    margin: 10px;
+    
+}
+
+.footer-section h3 {
+    margin-bottom: 10px;
+}
+
+.footer-section p {
+    margin-bottom: 10px;
+}
+
+.footer-section a {
+    color: #fff;
+    text-decoration: none;
+   
+}
+
+.footer-section a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.footer-section input{
+    box-shadow: 0 0 5px cyan, 0 0 25px cyan;
+    padding: 15px; 
+    border: none;
+    border-radius: 5px;
+}
+.footer-section button{
+    background-color: #8ed1fc;
+    padding: 15px; 
+    border: none;
+    border-radius: 5px;
+}
+
+.footer-section button:hover{
+    box-shadow: 0 0 5px cyan, 0 0 25px cyan;
+    cursor: pointer;
+    
+}

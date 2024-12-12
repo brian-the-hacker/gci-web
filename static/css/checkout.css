@@ -1,0 +1,88 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #eef2f3;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 500px;
+  margin: auto;
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.container:hover {
+  transform: translateY(-2px);
+}
+
+h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  color: #666;
+  font-weight: 500;
+}
+
+.form-control {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  transition: border 0.3s;
+}
+
+.form-control:focus {
+  border: 2px solid #007bff;
+  outline: none;
+}
+
+.btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+.messages {
+  margin-top: 20px;
+  list-style: none;
+  padding: 0;
+}
+
+.messages li {
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.success {
+  background-color: #28a745; /* Green */
+}
+
+.error {
+  background-color: #dc3545; /* Red */
+}

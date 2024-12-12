@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Post</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.1.2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='create_post.css') }}">
+</head>
+<body class="bg-gradient-to-br from-blue-50 to-indigo-50 py-12 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-2xl mx-auto">
+        <div class="bg-white rounded-xl shadow-lg p-8">
+            <h1 class="text-3xl font-bold text-gray-900 mb-8 text-center">
+                Create a New Post
+            </h1>
+            <!-- Back to Dashboard Button -->
+            <a href="{{ url_for('admin_dashboard') }}" class="w-full flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-lg text-white bg-gray-600 hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 transition-colors mt-4">
+                <span class="h-5 w-5 mr-2">⬅️</span> Back to Admin Dashboard
+            </a>
+
+            <!-- Flash Messages -->
+            {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
+                    <div class="mb-6">
+                        {% for category, message in messages %}
+                            <div class="p-4 rounded-lg flex items-center 
+                                {% if category == 'success' %} bg-green-50 text-green-700 {% else %} bg-red-50 text-red-700 {% endif %}">
+                                <span class="h-5 w-5 mr-2">⚠️</span>
+                                {{ message }}
+                            </div>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            {% endwith %}
+
+            <!-- Form -->
+            <form id="createPostForm" method="POST" enctype="multipart/form-data" class="space-y-6">
+                {{ form.hidden_tag() }}
+                
+                <div>
+                    <label for="title" class="block text-sm font-medium text-gray-700 mb-1">Title</label>
+                    {{ form.title(size=40, class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-colors") }}
+                </div>
+
+                <div>
+                    <label for="content" class="block text-sm font-medium text-gray-700 mb-1">Content</label>
+                    {{ form.content(rows=4, cols=40, class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-colors") }}
+                </div>
+
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Image Upload</label>
+                    <div id="dragDropArea" class="border-2 border-dashed rounded-lg p-6 text-center hover:border-indigo-500 cursor-pointer">
+                        <input type="file" name="image" id="image" accept="image/*" class="hidden" onchange="updateImageInfo()" />
+                        <label for="image" id="imageLabel" class="cursor-pointer">
+                            <span class="h-12 w-12 text-gray-400 mb-3">📷</span>
+                            <p class="text-sm text-gray-600">Drop an image here or click to upload</p>
+                            <p id="imageName" class="text-sm text-gray-600 hidden">Selected: <span id="fileName"></span></p>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Image Preview Area -->
+                <div id="imagePreviewContainer" class="mt-4 hidden">
+                    <h2 class="text-sm font-medium text-gray-700 mb-2">Image Preview</h2>
+                    <img id="imagePreview" class="w-full h-auto rounded-lg border border-gray-300" />
+                </div>
+
+                <button type="submit" class="w-full flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-lg text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-colors">
+                    <span class="h-5 w-5 mr-2">📤</span> Create Post
+                </button>
+
+                <!-- Button to Reset Form and Create Another Post -->
+                <button type="button" onclick="resetForm()" class="w-full flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-lg text-indigo-600 bg-gray-100 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-colors mt-4">
+                    <span class="h-5 w-5 mr-2">➕</span> Add Another Post
+                </button>
+
+            </form>
+        </div>
+    </div>
+    
+    
+    <script>
+        let postCount = 1;
+    
+        function addPost() {
+            const container = document.getElementById('postsContainer');
+            const newPost = document.createElement('div');
+            newPost.classList.add('postItem');
+            newPost.id = `post_${postCount}`;
+    
+            newPost.innerHTML = `
+                <input type="text" name="posts[${postCount}][title]" placeholder="Post Title" class="mb-2">
+                <textarea name="posts[${postCount}][content]" placeholder="Post Content" class="mb-2"></textarea>
+                <input type="file" name="posts[${postCount}][image]" accept="image/*" class="mb-2">
+            `;
+            
+            container.appendChild(newPost);
+            postCount++;
+        }
+    </script>
+    
+    <script>
+        function resetForm() {
+            // Reset the form and preview
+            document.getElementById('createPostForm').reset();
+            document.getElementById('imagePreviewContainer').classList.add('hidden');
+            document.getElementById('fileName').parentNode.classList.add('hidden');
+        }
+        
+        // Enable drag and drop functionality
+        const dragDropArea = document.getElementById('dragDropArea');
+        const fileInput = document.getElementById('image');
+        const fileName = document.getElementById('fileName');
+        const imagePreview = document.getElementById('imagePreview');
+        const imagePreviewContainer = document.getElementById('imagePreviewContainer');
+        const imageLabel = document.getElementById('imageLabel');
+
+        // Prevent default behavior for drag events
+        dragDropArea.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            dragDropArea.classList.add('bg-indigo-100');
+        });
+
+        dragDropArea.addEventListener('dragleave', () => {
+            dragDropArea.classList.remove('bg-indigo-100');
+        });
+
+        dragDropArea.addEventListener('drop', (e) => {
+            e.preventDefault();
+            dragDropArea.classList.remove('bg-indigo-100');
+
+            const file = e.dataTransfer.files[0];
+            if (file) {
+                fileInput.files = e.dataTransfer.files; // Set the input file to the dropped file
+                updateImageInfo(); // Update the image preview
+            }
+        });
+
+        // Update the image info (called when a file is selected or dropped)
+        function updateImageInfo() {
+            const file = fileInput.files[0];
+
+            if (file) {
+                const reader = new FileReader();
+
+                reader.onload = function(event) {
+                    imagePreview.src = event.target.result;
+                    imagePreviewContainer.classList.remove('hidden');
+                }
+
+                reader.readAsDataURL(file);
+
+                fileName.textContent = file.name;
+                document.getElementById('imageName').classList.remove('hidden');
+            }
+        }
+    </script>
+</body>
+</html>

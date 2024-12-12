@@ -1,0 +1,292 @@
+/* General Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+/* Header Styles */
+header {
+    background-color: #8ed1fc;
+    color: #fff;
+    font-family: Georgia;
+    font-weight: bold;
+}
+
+.top-bar {
+    padding: 10px 0;
+}
+
+.contact-info {
+    float: left;
+}
+
+.social-icons {
+    float: right;
+}
+
+.social-icons a {
+    color: #fff;
+    margin: 0 10px;
+    font-size: 1.2em;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.nav-links {
+    margin-left: 300px;
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.nav-links a:hover {
+    background: #555;
+}
+
+/* Main Content Styles */
+main .image img {
+    width: 100%;
+    height: auto;
+}
+
+.giving-section {
+    font-family: Georgia;
+    font-weight: bold;
+    background: #f9f9f9;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.giving-section h1, .giving-section h2 {
+    margin: 20px 0;
+    color: #333;
+}
+
+.giving-section p {
+    margin: 10px 0;
+    color: #666;
+}
+
+.giving-buttons .btn {
+    box-shadow: 0 0 5px cyan, 0 0 25px cyan;
+    display: inline-block;
+    margin: 10px;
+    padding: 15px 30px;
+    background: #8ed1fc;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.giving-buttons .btn:hover {
+    box-shadow: 0 0 5px cyan, 0 0 25px 0 0 50px cyan, 0 0 100px cyan, 0 0 200px cyan;
+    background: #004090;
+}
+
+.image-container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bank-details {
+    box-shadow: 0 0 5px cyan, 0 0 25px cyan;
+    position: absolute;
+    z-index: 1;
+    color: #fff;
+    padding: 50px;
+    background: rgba(0, 0, 0, 0.5); /* Optional: for better readability */
+    border-radius: 100px;
+    max-width: 80%;
+    width: 100%;
+    margin-left: 100px;
+}
+
+.bank-details h2 {
+    margin: 20px 0;
+    text-align: left;
+    margin-left: 500px;
+    color: white;
+}
+
+.bank-detail {
+    margin: 10px 0;
+}
+
+.bank-detail p {
+    margin: 5px 0;
+    margin-left: 550px;
+}
+
+.bank-detail strong {
+    color: #fff;
+}
+
+.image-container .image {
+    width: 100%;
+}
+
+.image-container .image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 100px;
+}
+
+/* Footer Styles */
+footer {
+    font-family: Georgia;
+    font-weight: bold;
+    background-image: url("https://cdn.pixabay.com/photo/2020/10/01/11/07/hands-5618240_1280.jpg");
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    padding: 20px 0; 
+    text-align: left;
+    position: relative;
+}
+
+.footer-container {
+    box-shadow: 0 0 5px cyan, 0 0 25px cyan;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-radius: 50px;
+    color: #fff;
+}
+
+.footer-section {
+    flex: 1;
+    margin: 10px; 
+    min-width: 200px;
+}
+
+.footer-section h3 {
+    margin-bottom: 10px;
+}
+
+.footer-section p, .footer-section a {
+    margin: 5px 0; 
+    color: white;
+    text-decoration: none;
+}
+
+.footer-section a:hover {
+    color: #fff;
+}
+
+.social-icons {
+    display: flex;
+    gap: 5px; 
+    margin-top: 20px;
+    margin-right: 150px;
+}
+
+.social-icons a {
+    color: #fff;
+    font-size: 1.5em;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #bbb;
+}
+
+.newsletter form {
+    display: flex;
+    flex-direction: column;
+    gap: 5px; 
+    margin-top: 10px;
+    margin-right: 30px;
+}
+
+.newsletter input[type="email"] {
+    padding: 15px; 
+    border: none;
+    border-radius: 5px;
+}
+
+.newsletter button {
+    box-shadow: 0 0 5px cyan, 0 0 25px cyan;
+    padding: 15px; 
+    border: none;
+    border-radius: 5px;
+    background: #8ed1fc;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.newsletter button:hover {
+    background: #004090;
+    box-shadow: 0 0 5px cyan, 0 0 25px 0 0 50px cyan, 0 0 100px cyan, 0 0 200px cyan;
+}
+
+.bottom-bar {
+    box-shadow: 0 0 5px cyan, 0 0 25px cyan;
+    padding: 10px 0;
+    color: white;
+    text-align: center;
+    background: #004090;
+    border-radius: 50px;
+    width: 700px;
+    margin-left: 300px;
+    margin-bottom: -20px;
+}
+
+.bottom-bar p {
+    margin-top: 20px; 
+}
+
+#backToTopBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    width: 50px;
+    height: 50px;
+    background-color: #007bff; 
+    color: white; 
+    border: none; 
+    border-radius: 50%; 
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
+    cursor: pointer;
+    z-index: 1000; 
+}
+
+#backToTopBtn i {
+    font-size: 24px; 
+    line-height: 50px; 
+}
+
+#backToTopBtn:hover {
+    background-color: #0056b3; 
+}

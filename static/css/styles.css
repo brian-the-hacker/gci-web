@@ -1,0 +1,1636 @@
+/* General reset and basic styling */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Poppins, sans-serif; /* Corrected font-family syntax */
+    line-height: 1.6;
+    background-color: white; /* Light gray background */
+    overflow-x: hidden; 
+    
+}
+
+/* Header styles */
+header {
+    position: relative; /* Ensure positioning context for child elements */
+    background-color: transparent; /* Transparent background */
+    color: #fff;
+    padding: 10px 0;
+    z-index: 1000; /* Ensure it appears on top */
+}
+
+.top-bar {
+    position: absolute; /* Position relative to header */
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: transparent; /* Transparent background */
+    color: #fff;
+    padding: 25px 0;
+    z-index: 1000; /* Ensure it appears on top */
+}
+
+.carousel {
+    position: relative;
+    background-size: 50px 50px; /* Adjust size for the pattern */
+}
+
+
+
+
+.item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    filter: brightness(60%);
+}
+
+
+
+
+.top-bar .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.contact-info {
+    margin-top: -80px;
+}
+
+.top-bar .contact-info {
+    text-decoration: none;
+    display: flex;
+    margin-left: -150px;
+}
+
+.top-bar .contact-info span {
+    margin-right: 20px; /* Adjusted margin */
+    color: white;
+    font-family: Poppins, sans-serif; /* Corrected font-family syntax */
+    font-weight: bold;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+.logo-container {
+    margin-bottom: -200px;
+    margin-top: -20px;
+}
+
+.logo-container span {
+    color: #8ed1fc;
+    margin-top: 150px;
+    font-style: oblique; /* Corrected font-style syntax */
+    font-size: 12px;
+}
+
+.social-icons {
+    margin-bottom: 80px;
+}
+
+.social-icons a {
+    color: #fff;
+    margin-left: 20px;
+    text-decoration: none;
+    position: relative; 
+}
+
+.social-icons a:hover {
+    background-color: #8ed1fc;
+}
+
+/* Navbar styles */
+.navbar {
+    position: relative; /* Ensure positioning context for child elements */
+    background-color: transparent; /* Transparent background */
+    color: #fff;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Thin white line */
+}
+
+.navbar .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.logo {
+    background-image: url("images/Gospel-logo.png");
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+.nav-links {
+    list-style-type: none;
+    display: flex;
+    margin-bottom: -150px; /* Check necessity of this margin */
+    z-index: 1000; /* Ensure it's above any background or overlapping elements */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.nav-links li {
+    margin: 0 10px;
+    display: inline-block; 
+    position: relative;
+}
+
+
+
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    font-family: Georgia, serif; /* Corrected font-family syntax */
+    font-weight: bold;
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.5);
+    display: inline-block; 
+    position: relative;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .top-bar {
+        padding: 15px 0; /* Adjust padding for smaller screens */
+    }
+
+    .top-bar .container {
+        flex-direction: column; /* Stack items vertically */
+        align-items: flex-start; /* Align items to the left */
+    }
+
+    .contact-info {
+        margin-left: 0; /* Reset margin */
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .top-bar .contact-info span {
+        margin-right: 10px; /* Adjust spacing for smaller screens */
+    }
+
+    .logo-container {
+        margin-bottom: -100px; /* Adjust bottom margin for smaller screens */
+        margin-top: 10px; /* Adjust top margin for smaller screens */
+    }
+
+    .social-icons {
+       
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .nav-links {
+        display: inline-block;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .nav-links li {
+        margin: 5px 0; /* Adjust spacing for stacked items */
+    }
+}
+
+@media (max-width: 480px) {
+    .top-bar {
+        padding: 10px 0; /* Further reduce padding */
+    }
+
+    .logo-container span {
+        font-size: 10px; /* Adjust font size for smaller screens */
+    }
+
+    .social-icons a {
+        margin-left: 10px; /* Adjust spacing */
+    }
+
+    .nav-links a {
+        padding: 8px; /* Reduce padding on smaller screens */
+    }
+}
+
+/* Main content sections */
+.main-content {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+/* General Container Styling */
+.container {
+    font-family: Georgia, serif; /* Use serif for Georgia fallback */
+    font-weight: bold;
+    height: 100%;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Section Heading */
+section h2 {
+    text-align: center;
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+/* Event Card and News Card Styling */
+.event-card, .news-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: #8ed1fc;
+    border-radius: 20px; /* Reduced border-radius for better responsiveness */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 40px; /* Reduced padding for smaller screens */
+    margin-bottom: 20px;
+}
+
+.event-card:hover, .news-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Event and News Card Title */
+.event-card h3, .news-card h3 {
+    transition: none;
+    font-size: 1.75em;
+    margin-bottom: 10px;
+    color: #007BFF;
+}
+
+.news-card h2 {
+    font-size: 1.75em;
+    margin-bottom: 10px;
+    color: #007BFF;
+}
+
+/* Card Paragraph */
+.event-card p, .news-card p {
+    transition: none;
+    font-size: 1em;
+    line-height: 1.6;
+    color: #666;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    font-size: 1em;
+    text-align: center;
+    color: #fff;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+    transform: translateY(-3px);
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    /* Adjust max-width for main content and container */
+    .main-content, .container {
+        max-width: 95%; /* Use a percentage for flexibility */
+        padding: 10px; /* Adjust padding */
+    }
+    
+    /* Adjust heading font size */
+    section h2 {
+        font-size: 2em; /* Smaller font size on smaller screens */
+        margin-bottom: 30px; /* Adjust margin */
+    }
+}
+
+@media (max-width: 768px) {
+    /* Card padding and font size adjustments */
+    .event-card, .news-card {
+        padding: 20px; /* Reduce padding for smaller devices */
+    }
+
+    .event-card h3, .news-card h3 {
+        font-size: 1.5em; /* Smaller heading */
+    }
+
+    .event-card p, .news-card p {
+        font-size: 0.9em; /* Smaller paragraph text */
+    }
+
+    .btn {
+        width: 100%; /* Full width buttons */
+        padding: 15px; /* More padding for touch targets */
+        font-size: 1.1em; /* Slightly larger font size */
+    }
+}
+
+@media (max-width: 480px) {
+    /* Adjusting for mobile devices */
+    section h2 {
+        font-size: 1.5em; /* Further reduce font size */
+        margin-bottom: 20px; /* Adjust margin */
+    }
+
+    .event-card, .news-card {
+        padding: 15px; /* Minimal padding for mobile */
+    }
+
+    .event-card h3, .news-card h3 {
+        font-size: 1.2em; /* Further reduce heading size */
+    }
+
+    .event-card p, .news-card p {
+        font-size: 0.8em; /* Further reduce paragraph text */
+    }
+}
+
+/* Flashes Styles */
+.flashes {
+    list-style-type: none;
+    padding: 0;
+}
+
+.flashes li {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Success and Error Styles */
+.flashes .success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.flashes .error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+/* Social Icon Styles */
+.social-icon a {
+    color: #ddd;
+    font-size: 1rem;
+    margin-right: 15px;
+    transition: color 0.3s ease;
+}
+
+.social-icon a:hover {
+    color: #f0a500;
+}
+
+/* Newsletter Styles */
+.newsletter {
+    flex: 1;
+    min-width: 220px;
+}
+
+.newsletter h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.newsletter p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    color: #ddd;
+}
+
+/* Newsletter Form Styles */
+.newsletter form {
+    display: flex;
+    gap: 10px;
+}
+
+.newsletter input {
+    padding: 8px;
+    font-size: 0.9rem;
+    border: none;
+    border-radius: 5px;
+    width: 200px; /* Adjust the width as needed */
+}
+
+.newsletter button {
+    padding: 8px 16px;
+    background-color: #8ed1fc;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.newsletter button:hover {
+    background-color: #d89e00;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    /* Adjust list item padding and margin for flashes */
+    .flashes li {
+        padding: 15px; /* More padding for touch devices */
+        margin-bottom: 15px; /* More margin for touch devices */
+    }
+
+    /* Social icon font size adjustment */
+    .social-icon a {
+        font-size: 0.9rem; /* Slightly smaller on smaller screens */
+        margin-right: 10px; /* Less margin */
+        
+    }
+
+    /* Newsletter adjustments */
+    .newsletter {
+        min-width: 100%; /* Full width on smaller screens */
+        margin-bottom: 20px; /* Space below newsletter */
+    }
+
+    .newsletter h3 {
+        font-size: 1.3rem; /* Smaller heading */
+    }
+
+    .newsletter p {
+        font-size: 0.9rem; /* Smaller paragraph */
+    }
+
+    .newsletter input {
+        width: 150px; /* Adjust input width for smaller screens */
+    }
+
+    .newsletter button {
+        padding: 6px 12px; /* Smaller button padding */
+    }
+}
+
+@media (max-width: 480px) {
+    /* Further adjustments for mobile devices */
+    .flashes li {
+        padding: 10px; /* Reduced padding */
+    }
+
+    .social-icon a {
+        font-size: 0.8rem; /* Even smaller font size */
+        margin-right: 8px; /* Further reduce margin */
+    }
+
+    .newsletter h3 {
+        font-size: 1.2rem; /* Smaller heading on mobile */
+    }
+
+    .newsletter p {
+        font-size: 0.8rem; /* Further reduce paragraph text */
+    }
+
+    .newsletter input {
+        width: 100%; /* Full width input for mobile */
+    }
+}
+
+
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .footer-top {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-column {
+        text-align: center;
+    }
+
+    .footer-column ul {
+        text-align: left;
+        padding-left: 0;
+    }
+}
+
+/* Bottom bar styles */
+
+.welcome-section {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 20px 0;
+    margin-top: 20px;
+    margin-left: -200px;
+}
+
+.welcome-text {
+    flex: 1;
+    min-width: 300px;
+    margin-right: 70px;
+    opacity: 0;
+    transform: translateX(-100%);
+    animation: slideFromLeft 1s forwards;
+}
+
+/* Styling for the gallery button */
+.gallery-button {
+    display: inline-block;
+    padding: 5px 20px;
+    background-color: #8ed1fc;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+    margin-top: 250px;
+    margin-left: 265px;
+}
+
+.gallery-button:hover {
+    background-color: #45a049;
+}
+
+.gallery-thumbnail {
+    text-align: center;
+}
+
+.gallery-thumbnail img.thumbnail {
+    max-width: 300px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    margin-bottom: -660px;
+    margin-left: -600px;
+}
+
+.gallery-thumbnail img.thumbnail:hover {
+    transform: scale(1.05);
+}
+
+/* CSS for the gallery thumbnail */
+.gallery-thumbnail {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.gallery-thumbnail img {
+    max-width: 200px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.gallery-thumbnail img:hover {
+    transform: scale(1.05);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .welcome-section {
+        flex-direction: column;
+        margin-left: 0;
+    }
+
+    .welcome-text {
+        margin-right: 0;
+        text-align: center;
+        animation: none;
+        transform: none;
+        opacity: 1; /* Ensure visibility on small screens */
+    }
+
+    .gallery-button {
+        margin-top: 20px;
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .gallery-thumbnail img.thumbnail {
+        max-width: 100%;
+        margin-left: 0;
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-button {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .gallery-thumbnail img {
+        max-width: 150px;
+    }
+}
+
+@keyframes slideFromLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.highlight1 {
+    font-family: Georgia;
+    font-size: 2.3rem;
+    color: #004080; /* Dark blue */
+    margin-bottom: 20px;
+}
+
+.highlight2 {
+    color: #8ed1fc;
+    font-family: Georgia;
+}
+
+.accordion {
+    width: 100%;
+    max-width: 400px;
+}
+
+.accordion-item {
+    margin-bottom: 10px;
+}
+
+.accordion-item button {
+    font-family: Georgia;
+    font-weight: bold;
+    background-color: #8ed1fc; /* Light blue */
+    color: white;
+    padding: 15px;
+    width: 100%; /* Changed to 100% for responsiveness */
+    border: none;
+    text-align: left;
+    cursor: pointer;
+    font-size: 1.2rem;
+    outline: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease;
+    border-radius: 30px;
+    clip-path: polygon(0 0, 95% 0, 100% 50%, 95% 100%, 0 100%);
+}
+
+.accordion-item button:hover {
+    background-color: #c1a882;
+}
+
+.accordion-item button.active {
+    background-color: #004080; /* Dark blue */
+}
+
+.accordion-item .content {
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-top: none;
+    display: none;
+    background-color: #f9f9f9;
+    font-family: Georgia;
+    font-weight: bold;
+}
+
+.card-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Allow wrapping if the screen is small */
+    gap: 20px; /* Adjusted space between the cards */
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 10px; /* Slightly more rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Softer shadow for a lighter feel */
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 300px; /* Fixed width for consistency */
+    max-width: 100%;
+    margin-top: 10px;
+}
+
+.card:hover {
+    transform: translateY(-10px); /* More pronounced hover effect */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Slightly softer shadow on hover */
+}
+
+.card-img {
+    width: 100%;
+    height: 280px; /* Set height for consistency */
+    overflow: hidden; /* Ensure image does not overflow */
+}
+
+.card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cover ensures images are well displayed */
+    display: block; /* Remove extra spacing below images */
+}
+
+.card-info {
+    padding: 15px;
+}
+
+.card-name {
+    font-size: 1.5rem; /* Slightly smaller font size for balance */
+    margin: 10px 0;
+    color: #333;
+}
+
+.card-role {
+    font-size: 1rem;
+    color: #777; /* Lighter color for role text */
+    margin: 5px 0;
+}
+
+.card-email {
+    font-size: 0.9rem;
+    color: #555; /* Darker color for email text */
+}
+
+.card-info button {
+    background-color: #007bff; /* Consistent button color */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.card-info button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .highlight1 {
+        font-size: 1.8rem; /* Reduced font size */
+    }
+
+    .accordion {
+        max-width: 100%; /* Full width on smaller screens */
+    }
+
+    .accordion-item button {
+        font-size: 1rem; /* Smaller font size */
+        padding: 10px; /* Reduced padding */
+    }
+
+    .card-container {
+        gap: 10px; /* Reduced gap */
+        justify-content: center; /* Center cards */
+    }
+
+    .card {
+        margin-right: 0; /* Reset margin */
+    }
+
+    .card-name {
+        font-size: 1.2rem; /* Adjusted for smaller screens */
+    }
+
+    .card-role,
+    .card-email {
+        font-size: 0.9rem; /* Smaller font sizes for roles and emails */
+    }
+
+    .card-info button {
+        font-size: 0.9rem; /* Smaller button size */
+    }
+}
+
+@media (max-width: 480px) {
+    .highlight1 {
+        font-size: 1.5rem; /* Further reduce font size */
+    }
+
+    .card {
+        width: 100%; /* Full width for cards */
+    }
+
+    .accordion-item button {
+        font-size: 0.9rem; /* Smaller font size */
+    }
+
+    .card-info button {
+        padding: 8px 16px; /* Adjust padding for buttons */
+        font-size: 0.8rem; /* Smaller button size */
+    }
+}
+
+/* Modal container hidden by default */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgba(0, 0, 0, 0.5); /* Black background with transparency */
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto; /* Center the modal vertically */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 90%; /* Set a percentage width for responsiveness */
+    max-width: 500px; /* Maximum width for larger screens */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow for depth */
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .modal-content {
+        margin: 10% auto; /* Reduce vertical margin on smaller screens */
+        padding: 15px; /* Adjust padding */
+        width: 90%; /* Ensure full width */
+    }
+
+    .close {
+        font-size: 24px; /* Slightly smaller close button on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .modal-content {
+        margin: 5% auto; /* Further reduce vertical margin */
+        padding: 10px; /* Reduce padding */
+    }
+
+    .close {
+        font-size: 20px; /* Further reduce close button size */
+    }
+}
+
+/* Gallery Thumbnails */
+/* Carousel */
+.carousel {
+    height: 90vh;
+    margin-top: -90px;
+    width: 100vw;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel .list .item {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0 0 0 0;
+}
+
+.carousel .list .item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel .list .item .content {
+    position: absolute;
+    bottom: 40%;
+    left: 50%;
+    transform: translate(-50%);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #fff;
+    padding: 0 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.carousel .list .item .author {
+    font-weight: bold;
+    letter-spacing: 10px;
+}
+
+.carousel .list .item .title,
+.carousel .list .item .topic {
+    font-size: 3em; /* Default font size for larger screens */
+    font-weight: bold;
+    line-height: 1.3em;
+}
+
+.carousel .list .item .topic {
+    color: #f1683a;
+}
+
+.carousel .list .item .buttons {
+    display: grid; /* Use grid layout for buttons */
+    grid-template-columns: repeat(2, 130px);
+    grid-template-rows: 40px;
+    gap: 5px;
+    margin-top: 20px;
+}
+
+.carousel .list .item {
+    border: none;
+    background-color: #eee;
+    letter-spacing: 3px;
+    font-family: Poppins;
+    font-weight: 500;
+}
+
+.des {
+    font-size: 20px; /* Default description font size */
+}
+
+.carousel .list .item {
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: #eee;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1200px) {
+    .carousel .list .item .title,
+    .carousel .list .item .topic {
+        font-size: 2.5em; /* Reduce font size for medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .carousel .list .item .title,
+    .carousel .list .item .topic {
+        font-size: 2em; /* Further reduce font size for smaller screens */
+    }
+
+    .carousel .list .item .content {
+        bottom: 30%; /* Adjust position of content */
+        padding: 0 15px; /* Reduce horizontal padding */
+    }
+
+    .carousel .list .item .buttons {
+        grid-template-columns: repeat(2, 100px); /* Adjust button size */
+    }
+
+    .des {
+        font-size: 18px; /* Reduce description font size */
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel .list .item .title,
+    .carousel .list .item .topic {
+        font-size: 1.5em; /* Further reduce font size for small screens */
+    }
+
+    .carousel .list .item .content {
+        bottom: 20%; /* Adjust position of content for very small screens */
+        padding: 0 10px; /* Further reduce horizontal padding */
+    }
+
+    .carousel .list .item .buttons {
+        grid-template-columns: repeat(2, 80px); /* Adjust button size for small screens */
+    }
+
+    .des {
+        font-size: 16px; /* Further reduce description font size */
+    }
+}
+
+
+/* Buttons Container */
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Space between the buttons */
+    margin-top: 170px;
+    margin-right: 550px; /* This can be adjusted for responsiveness */
+}
+
+/* Button Styling */
+.btn {
+    background: #eee;
+    border: none;
+    background-color: transparent; /* Button color */
+    color: white;
+    letter-spacing: 1px; /* Slightly reduced letter spacing */
+    font-family: Poppins;
+    font-weight: 500;
+    padding: 8px; /* Same padding for top and bottom */
+    font-size: 12px; /* Consistent font size */
+    text-transform: uppercase;
+    text-decoration: none; /* Removes underline from anchor */
+    cursor: pointer;
+    border: 1px solid #fff;
+    transition: background-color 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 130px; /* Fixed width for both buttons */
+    height: 40px; /* Fixed height for both buttons */
+}
+
+/* Hover Effect */
+.btn:hover {
+    background-color: #eee; /* Darker blue on hover */
+    color: #fff;
+}
+
+/* Thumbnail */
+.thumbnail {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    width: max-content;
+    z-index: 100;
+    display: flex;
+    gap: 20px;
+}
+
+.thumbnail .item {
+    width: 150px;
+    height: 220px;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.thumbnail .item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.thumbnail .item .content {
+    color: #fff;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+}
+
+.thumbnail .item .content .title {
+    font-weight: 500;
+}
+
+.thumbnail .item .content .description {
+    font-weight: 300;
+}
+
+/* Arrows */
+.arrows {
+    position: absolute;
+    top: 80%;
+    right: 52%;
+    z-index: 100;
+    width: 300px;
+    max-width: 30%;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.arrows button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #eee4;
+    border: none;
+    color: #fff;
+    font-family: monospace;
+    font-weight: bold;
+    transition: .5s;
+}
+
+.arrows button:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+/* Animation */
+.carousel .list .item:nth-child(1) {
+    z-index: 1;
+}
+
+/* Animation text in first item */
+.carousel .list .item:nth-child(1) .content .author,
+.carousel .list .item:nth-child(1) .content .title,
+.carousel .list .item:nth-child(1) .content .topic,
+.carousel .list .item:nth-child(1) .content .des,
+.carousel .list .item:nth-child(1) .content .buttons {
+    transform: translateY(50px);
+    filter: blur(20px);
+    opacity: 0;
+    animation: showContent .5s 1s linear 1 forwards;
+}
+
+@keyframes showContent {
+    to {
+        transform: translateY(0px);
+        filter: blur(0px);
+        opacity: 1;
+    }
+}
+
+.carousel .list .item:nth-child(1) .content .title {
+    animation-delay: 1.2s !important;
+}
+
+.carousel .list .item:nth-child(1) .content .topic {
+    animation-delay: 1.4s !important;
+}
+
+.carousel .list .item:nth-child(1) .content .des {
+    animation-delay: 1.6s !important;
+}
+
+.carousel .list .item:nth-child(1) .content .buttons {
+    animation-delay: 1.8s !important;
+}
+
+/* Create animation when next click */
+.carousel.next .list .item:nth-child(1) img {
+    width: 150px;
+    height: 220px;
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    border-radius: 30px;
+    animation: showImage .5s linear 1 forwards;
+}
+
+@keyframes showImage {
+    to {
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+    }
+}
+
+.carousel.next .thumbnail .item:nth-last-child(1) {
+    overflow: hidden;
+    animation: showThumbnail .5s linear 1 forwards;
+}
+
+.carousel.prev .list .item img {
+    z-index: 100;
+}
+
+@keyframes showThumbnail {
+    from {
+        width: 0;
+        opacity: 0;
+    }
+}
+
+.carousel.next .thumbnail {
+    animation: effectNext .5s linear 1 forwards;
+}
+
+@keyframes effectNext {
+    from {
+        transform: translateX(150px);
+    }
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .buttons {
+        margin-top: 100px; /* Reduce margin-top for medium screens */
+        margin-right: 100px; /* Adjust margin-right for medium screens */
+    }
+
+    .btn {
+        font-size: 14px; /* Increase font size for better readability */
+        width: 120px; /* Adjust button width */
+        height: 36px; /* Adjust button height */
+    }
+}
+
+@media (max-width: 768px) {
+    .buttons {
+        flex-direction: column; /* Stack buttons vertically */
+        margin-right: 0; /* Remove margin-right for small screens */
+    }
+
+    .btn {
+        font-size: 12px; /* Adjust font size */
+        width: 100%; /* Make buttons full width */
+        height: 40px; /* Keep height consistent */
+        padding: 10px; /* Increase padding for touch targets */
+    }
+
+    .thumbnail {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        bottom: 10px; /* Adjust position */
+    }
+
+    .thumbnail .item {
+        width: 120px; /* Adjust thumbnail width */
+        height: 180px; /* Adjust thumbnail height */
+    }
+}
+
+@media (max-width: 480px) {
+    .buttons {
+        margin-top: 80px; /* Further reduce margin-top for very small screens */
+    }
+
+    .btn {
+        font-size: 10px; /* Reduce font size for very small screens */
+        padding: 8px; /* Adjust padding */
+    }
+
+    .arrows {
+        top: 90%; /* Adjust arrow position */
+        width: 80%; /* Make arrows full width */
+    }
+
+    .thumbnail .item {
+        width: 100px; /* Further adjust thumbnail width */
+        height: 150px; /* Further adjust thumbnail height */
+    }
+}
+
+/* running time */
+
+.carousel .time {
+    position: absolute;
+    z-index: 1000;
+    width: 0%;
+    height: 3px;
+    background-color: #f1683a;
+    left: 0;
+    top: 0;
+}
+
+.carousel.next .time,
+.carousel.prev .time {
+    animation: runningTime 3s linear 1 forwards;
+}
+
+@keyframes runningTime {
+    from {
+        width: 100%;
+    }
+    to {
+        width: 0;
+    }
+}
+
+/* prev click */
+
+.carousel.prev .list .item:nth-child(2) {
+    z-index: 2;
+}
+
+.carousel.prev .list .item:nth-child(2) img {
+    animation: outFrame 0.5s linear 1 forwards;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+@keyframes outFrame {
+    to {
+        width: 150px;
+        height: 220px;
+        bottom: 50px;
+        left: 50%;
+        border-radius: 20px;
+    }
+}
+
+.carousel.prev .thumbnail .item:nth-child(1) {
+    overflow: hidden;
+    opacity: 0;
+    animation: showThumbnail 0.5s linear 1 forwards;
+}
+
+.carousel.next .arrows button,
+.carousel.prev .arrows button {
+    pointer-events: none;
+}
+
+.carousel.prev .list .item:nth-child(2) .content .author,
+.carousel.prev .list .item:nth-child(2) .content .title,
+.carousel.prev .list .item:nth-child(2) .content .topic,
+.carousel.prev .list .item:nth-child(2) .content .des,
+.carousel.prev .list .item:nth-child(2) .content .buttons {
+    animation: contentOut 1.5s linear 1 forwards !important;
+}
+
+@keyframes contentOut {
+    to {
+        transform: translateY(-150px);
+        filter: blur(20px);
+        opacity: 0;
+    }
+}
+
+/* Contact Section Styles */
+#contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    background-color: #f9f9f9;
+}
+
+.contact-container {
+    font-family: Georgia, serif;
+    font-weight: bold;
+    display: flex;
+    flex-direction: row; /* Keep elements side by side on large screens */
+    max-width: 1200px;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Contact Section */
+.contact-info {
+    font-family: Georgia, serif;
+    font-weight: bold;
+    flex: 1; /* Take up available space */
+    padding: 40px;
+}
+
+.contact-info h2 {
+    font-size: 2rem;
+    color: inherit;
+}
+
+.contact-info h2 span {
+    color: #8ed1fc;
+}
+
+.contact-info p {
+    margin: 20px 0;
+    color: inherit;
+}
+
+.contact-details {
+    margin-top: 20px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.contact-item i {
+    font-size: 1.5rem;
+    color: #8ed1fc;
+    margin-right: 10px;
+}
+
+.contact-form {
+    flex: 1; /* Take up available space */
+    padding: 40px;
+    background-color: #f9f9f9;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form input,
+.contact-form textarea {
+    font-family: Georgia, serif;
+    font-weight: bold;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%; /* Ensure form elements take full width */
+}
+
+.contact-form textarea {
+    height: 190px;
+}
+
+.contact-form button {
+    font-family: Georgia, serif;
+    font-weight: bold;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #8ed1fc;
+    color: white;
+    cursor: pointer;
+    width: 100%; /* Ensure the button takes full width */
+}
+
+.contact-form button:hover {
+    background-color: #007bff; /* Darker color on hover for better visibility */
+}
+
+/* Responsive Design Adjustments */
+@media (max-width: 768px) {
+    /* Adjust padding for smaller screens */
+    #contact {
+        padding: 20px;
+    }
+
+    .contact-container {
+        flex-direction: column; /* Stack elements vertically */
+        padding: 20px;
+    }
+
+    .contact-info,
+    .contact-form {
+        padding: 20px; /* Reduce padding for better fit */
+    }
+
+    .contact-info h2 {
+        font-size: 1.5rem; /* Smaller heading for mobile */
+    }
+
+    .contact-form textarea {
+        height: 120px; /* Adjust height for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-info h2 {
+        font-size: 1.2rem; /* Even smaller heading for very small screens */
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        padding: 8px; /* Smaller padding for input fields */
+    }
+
+    .contact-form button {
+        padding: 8px; /* Smaller button padding */
+    }
+
+    .carousel.prev .list .item:nth-child(2) img {
+        width: 100px; /* Smaller image for very small screens */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .carousel.prev .list .item:nth-child(2) .content {
+        font-size: 0.9rem; /* Smaller font size for content */
+    }
+}
+
+
+
+/* Added Styles */
+/* Button styling */
+#backToTopBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    width: 50px;
+    height: 50px;
+    background-color: #007bff; /* Blue background */
+    color: white; /* White text color */
+    border: none; /* No border */
+    border-radius: 50%; /* Round button */
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    cursor: pointer;
+    z-index: 1000; /* Ensure it's on top of other elements */
+}
+
+/* Icon styling */
+#backToTopBtn i {
+    font-size: 24px; /* Font size for the icon */
+    line-height: 50px; /* Vertically center the icon */
+}
+
+/* Button hover effect */
+#backToTopBtn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Footer Styles */
+.site-footer {
+    background: linear-gradient(to right,#00093c, #2d0b00);
+    color: #fff;
+    padding: 50px 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 220px;
+}
+
+.footer-column h4 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.footer-column p,
+.footer-column ul {
+    font-size: 1rem;
+    color: #ddd;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+    color: #ddd;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+    color: #f0a500;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid #444;
+    font-size: 0.9rem;
+}
+
+.footer-bottom p {
+    margin: 10px 0;
+}
+
+.footer-bottom ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-bottom ul li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.footer-bottom ul li a {
+    color: #ddd;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-bottom ul li a:hover {
+    color: #f0a500;
+}
+
+
+/* General styles for desktop (default) */
+

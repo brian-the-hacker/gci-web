@@ -1,0 +1,514 @@
+/* Base Styles */
+:root {
+  --primary: #2c3e50;
+  --secondary: #e74c3c;
+  --accent: #3498db;
+  --text: #2c3e50;
+  --light: #ecf0f1;
+  --dark: #34495e;
+  --transition: all 0.3s ease;
+  --primary-color: #2c3e50;
+  --secondary-color: #3498db;
+  --accent-color: #e74c3c;
+  --text-color: #2c3e50;
+  --light-bg: #f8f9fa;
+  --spacing: 6rem;
+  --container-width: 1200px;
+
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  color: var(--text);
+}
+
+/* Header & Navigation */
+.top-bar {
+  background: var(--primary);
+  color: var(--light);
+  padding: 0.5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contact-info a, .social-links a {
+  color: var(--light);
+  text-decoration: none;
+  margin-right: 1rem;
+  transition: var(--transition);
+}
+
+.contact-info a:hover, .social-links a:hover {
+  color: var(--secondary);
+}
+
+nav {
+  background: white;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo img {
+  height: 50px;
+  transition: var(--transition);
+}
+
+.logo:hover img {
+  transform: scale(1.05);
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.nav-links a {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+  padding: 0.5rem 0;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--secondary);
+  transition: var(--transition);
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.about {
+  padding: 50px 20px;
+  background-color: #f8f9fa;
+}
+
+.about-content {
+  display: flex;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.about-text {
+  flex: 1;
+  padding: 20px;
+}
+
+.about-text h2 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.about-text p {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.about-image {
+  flex: 1.9;  /* Increase this value to make the image area larger relative to the text */
+  min-width: 450px;  /* Ensure a minimum width for the image area on larger screens */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+
+/* Section Styles */
+section {
+  padding: var(--spacing) 0;
+}
+
+section:nth-child(even) {
+  background-color: var(--light-bg);
+}
+
+h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  position: relative;
+  padding-bottom: 1rem;
+  text-align: center;
+}
+
+h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background-color: var(--secondary-color);
+}
+
+/* Mission & Vision Section */
+.mission-vision p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.mission-vision strong {
+  color: var(--secondary-color);
+}
+
+/* Our Beliefs Section */
+.our-beliefs ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.our-beliefs li {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.our-beliefs li:hover {
+  transform: translateY(-5px);
+}
+
+/* Church History Section */
+.church-history p {
+  font-size: 1.1rem;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Programs & Ministries Section */
+.programs-ministries ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.programs-ministries li {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.programs-ministries li:hover {
+  transform: translateY(-5px);
+}
+
+.programs-ministries strong {
+  color: var(--secondary-color);
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  :root {
+    --spacing: 4rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  .container {
+    padding: 0 1rem;
+  }
+
+  .our-beliefs ul,
+  .programs-ministries ul {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+section {
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .about-content {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .about-text h2 {
+      font-size: 2rem;
+  }
+
+  .about-text p {
+      font-size: 1rem;
+  }
+}
+
+
+/* Leadership Section */
+.leadership {
+  padding: 5rem 2rem;
+  background: var(--light);
+}
+
+.leadership-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.leader-card {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: var(--transition);
+}
+
+.leader-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.leader-image {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 1;
+}
+
+.leader-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition);
+}
+
+.leader-card:hover .leader-image img {
+  transform: scale(1.05);
+}
+
+.social-overlay {
+  position: absolute;
+  bottom: -50px;
+  left: 0;
+  right: 0;
+  background: rgba(0,0,0,0.7);
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  transition: var(--transition);
+}
+
+.leader-card:hover .social-overlay {
+  bottom: 0;
+}
+
+.social-icon {
+  color: white;
+  font-size: 1.2rem;
+  transition: var(--transition);
+}
+
+.social-icon:hover {
+  color: var(--secondary);
+  transform: scale(1.2);
+}
+
+.leader-info {
+  padding: 1.5rem;
+}
+
+.leader-info h3 {
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+
+.position {
+  color: var(--secondary);
+  font-weight: 500;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+/* Footer */
+footer {
+  background: var(--dark);
+  color: var(--light);
+  padding: 4rem 2rem 2rem;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-section h3 {
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.footer-section h3::after {
+  content: '';
+  position: absolute;
+  bottom: -0.5rem;
+  left: 0;
+  width: 50px;
+  height: 2px;
+  background: var(--secondary);
+}
+
+#newsletter-form {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+#newsletter-form input {
+  padding: 0.8rem;
+  border: none;
+  border-radius: 5px;
+  flex: 1;
+}
+
+.btn {
+  background: var(--secondary);
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.btn:hover {
+  background: var(--primary);
+  transform: translateY(-2px);
+}
+
+/* Mobile Menu */
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.mobile-menu span {
+  width: 30px;
+  height: 3px;
+  background: var(--primary);
+  transition: var(--transition);
+}
+
+@media (max-width: 768px) {
+  .mobile-menu {
+    display: flex;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    flex-direction: column;
+    padding: 1rem;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .top-bar {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.leader-card {
+  animation: fadeIn 0.5s ease forwards;
+}

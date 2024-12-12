@@ -1,0 +1,55 @@
+/* Add your custom styles here */
+#dragDropArea {
+    border: 2px dashed #d1d5db;
+    padding: 1.5rem;
+    text-align: center;
+    cursor: pointer;
+    transition: border 0.3s ease, background-color 0.3s ease;
+}
+
+#dragDropArea:hover {
+    border-color: #4c51bf;
+    background-color: #e5e7eb;
+}
+
+#imageLabel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#imageName {
+    display: none;
+}
+
+#imageName span {
+    font-weight: bold;
+    color: #333;
+}
+
+/* Make the form more responsive */
+@media screen and (max-width: 640px) {
+    .max-w-2xl {
+        max-width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    #dragDropArea {
+        padding: 1rem; /* Adjust padding for mobile */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .text-sm {
+        font-size: 0.875rem; /* Smaller text for mobile */
+    }
+
+    #imageLabel p {
+        font-size: 0.9rem;
+    }
+
+    #imageName {
+        font-size: 0.8rem;
+    }
+}

@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Previous head section remains the same -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GCI Machakos - Gospel Centers International</title>
+    <link rel="stylesheet" href="static/css/about.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Previous header and nav sections remain the same -->
+    <header>
+        <div class="top-bar">
+            <div class="contact-info">
+                <a href="tel:+254123456789"><i class="fas fa-phone"></i> +254 123 456 789</a>
+                <a href="mailto:info@gcimachakos.org"><i class="fas fa-envelope"></i> info@gcimachakos.org</a>
+            </div>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+        
+        <nav>
+            <div class="logo">
+                <img src="images/logo.png" alt="GCI Logo">
+                <span>GCI Machakos</span>
+            </div>
+            
+            <button class="mobile-menu" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="nav-links">
+                <li><a href="{{ url_for('index') }}">Home</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact Us</a></li>
+                <li><a href="{{ url_for('about') }}">About</a></li>
+                <li><a href="{{ url_for('events') }}">Events</a></li>
+                <li><a href="{{ url_for('gallery') }}">gallery</a></li>
+                <li><a href="{{ url_for('giving') }}">giving</a></li>
+                <li><a href="{{ url_for('donate') }}">donation</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about" class="about">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>About GCI Machakos</h2>
+                    <p>Gospel Centres International is a 21st Century evangelical and missional oriented ministry dedicated to advancing and enhancing God's Kingdom in every nation of the world.</p>
+                    <p>We are committed to fulfilling the great commission of our Lord Jesus Christ with excellence, reaching out to all corners of Kenya and beyond.</p>
+                    <a href="#contact" class="btn">Contact Us</a>
+                </div>
+                <div class="about-image">
+                    <img src="static/images/Joseyphotos_55.jpg" alt="Church Building">
+                </div>
+            </div>
+        </section>
+        
+        
+        <!-- New Leadership Section -->
+        <section id="leadership" class="leadership">
+            <div class="container">
+                <h2>Our Leadership Team</h2>
+                <p class="section-description">Meet the dedicated servants who guide our congregation with wisdom and grace.</p>
+                
+                <div class="leadership-grid">
+                    <!-- Senior Pastor -->
+                    <div class="leader-card">
+                        <div class="leader-image">
+                            <img src="static/images/Joseyphotos2_22.jpg" alt="Senior Pastor">
+                            <div class="social-overlay">
+                                <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                                <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                        <div class="leader-info">
+                            <h3>Rev. John Doe</h3>
+                            <span class="position">Senior Pastor</span>
+                            <p>Leading our congregation with over 20 years of pastoral experience and a heart for community outreach.</p>
+                        </div>
+                    </div>
+
+                    <!-- Assistant Pastor -->
+                    <div class="leader-card">
+                        <div class="leader-image">
+                            <img src="static/images/Joseyphotos2_22.jpg" alt="Assistant Pastor">
+                            <div class="social-overlay">
+                                <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                                <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                        <div class="leader-info">
+                            <h3>Pst. Jafeth Smith</h3>
+                            <span class="position">Assistant Pastor</span>
+                            <p>Specializing in youth ministry and family counseling with a passion for worship and teaching.</p>
+                        </div>
+                    </div>
+
+                    <!-- Worship Leader -->
+                    <div class="leader-card">
+                        <div class="leader-image">
+                            <img src="static/images/Joseyphotos2_22.jpg" alt="Worship Leader">
+                            <div class="social-overlay">
+                                <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                                <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                        <div class="leader-info">
+                            <h3>David Wilson</h3>
+                            <span class="position">Worship Leader</span>
+                            <p>Leading our worship ministry with a blend of traditional and contemporary styles to uplift spirits.</p>
+                        </div>
+                    </div>
+
+                    <!-- Youth Pastor -->
+                    <div class="leader-card">
+                        <div class="leader-image">
+                            <img src="static/images/Joseyphotos2_22.jpg" alt="Youth Pastor">
+                            <div class="social-overlay">
+                                <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                                <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                        <div class="leader-info">
+                            <h3>Sarah Johnson</h3>
+                            <span class="position">Youth Pastor</span>
+                            <p>Dedicated to nurturing the spiritual growth of our young members through engaging programs and mentorship.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="mission-vision" class="mission-vision">
+            <div class="container">
+                <h2>Our Mission & Vision</h2>
+                <p><strong>Mission:</strong> To spread the gospel and create disciples across the globe, reaching every community with God's love.</p>
+                <p><strong>Vision:</strong> To be a church that reflects Christ's compassion and unity, fostering a spiritual environment for believers to grow and thrive.</p>
+            </div>
+        </section>
+        
+        <section id="our-beliefs" class="our-beliefs">
+            <div class="container">
+                <h2>Our Beliefs</h2>
+                <ul>
+                    <li>We believe in the authority of the Bible as the Word of God.</li>
+                    <li>We believe in the Trinity: God the Father, Son, and Holy Spirit.</li>
+                    <li>We believe in salvation through Jesus Christ.</li>
+                    <li>We believe in the importance of the Great Commission.</li>
+                </ul>
+            </div>
+        </section>
+        
+        <section id="church-history" class="church-history">
+            <div class="container">
+                <h2>Church History</h2>
+                <p>Since our founding in [Year], GCI Machakos has been dedicated to sharing the gospel and impacting lives. Through the years, we've grown from a small gathering to a vibrant community with multiple ministries.</p>
+            </div>
+        </section>
+        
+        <section id="programs-ministries" class="programs-ministries">
+            <div class="container">
+                <h2>Programs & Ministries</h2>
+                <p>Our church is home to a variety of ministries that serve different needs, including:</p>
+                <ul>
+                    <li><strong>Youth Ministry:</strong> Guiding and mentoring our younger members.</li>
+                    <li><strong>Community Outreach:</strong> Supporting our local community through various initiatives.</li>
+                    <li><strong>Family Counseling:</strong> Providing guidance and counseling to families in need.</li>
+                </ul>
+            </div>
+        </section>
+        
+        <!-- Rest of the sections remain the same -->
+        <!-- Previous sections (contact, etc.) remain unchanged -->
+    </main>
+
+    <!-- Previous footer section remains the same -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>GCI Machakos is dedicated to spreading the gospel and building a community of faithful believers.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Newsletter</h3>
+                <form id="newsletter-form">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit" class="btn">Subscribe</button>
+                </form>
+                <div id="newsletter-message"></div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 GCI Machakos. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+<script>
+// Smooth Scroll
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        window.scrollTo({
+          top: target.offsetTop - 100,
+          behavior: 'smooth'
+        });
+      }
+    });
+  });
+  
+  // Mobile Menu Animation
+  const mobileMenu = document.querySelector('.mobile-menu');
+  const navLinks = document.querySelector('.nav-links');
+  
+  mobileMenu?.addEventListener('click', () => {
+    mobileMenu.classList.toggle('active');
+    navLinks?.classList.toggle('active');
+    
+    if (mobileMenu.classList.contains('active')) {
+      mobileMenu.children[0].style.transform = 'rotate(45deg) translate(6px, 6px)';
+      mobileMenu.children[1].style.opacity = '0';
+      mobileMenu.children[2].style.transform = 'rotate(-45deg) translate(6px, -6px)';
+    } else {
+      mobileMenu.children[0].style.transform = 'none';
+      mobileMenu.children[1].style.opacity = '1';
+      mobileMenu.children[2].style.transform = 'none';
+    }
+  });
+  
+  // Intersection Observer for Scroll Animations
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+  };
+  
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0)';
+      }
+    });
+  }, observerOptions);
+  
+  // Apply animations to sections
+  document.querySelectorAll('section').forEach(section => {
+    section.style.opacity = '0';
+    section.style.transform = 'translateY(20px)';
+    section.style.transition = 'all 0.6s ease-out';
+    observer.observe(section);
+  });
+  
+  // Newsletter Form Handling
+  const newsletterForm = document.getElementById('newsletter-form');
+  const newsletterMessage = document.getElementById('newsletter-message');
+  
+  newsletterForm?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const email = e.target.querySelector('input[type="email"]').value;
+    
+    // Simulate form submission
+    newsletterMessage.textContent = 'Thank you for subscribing!';
+    newsletterMessage.style.color = '#2ecc71';
+    e.target.reset();
+    
+    setTimeout(() => {
+      newsletterMessage.textContent = '';
+    }, 3000);
+  });
+  
+  // Leader Card Hover Effect
+  document.querySelectorAll('.leader-card').forEach(card => {
+    card.addEventListener('mouseenter', () => {
+      card.querySelector('.social-overlay').style.bottom = '0';
+    });
+    
+    card.addEventListener('mouseleave', () => {
+      card.querySelector('.social-overlay').style.bottom = '-50px';
+    });
+  });
+  
+  // Sticky Navigation
+  let lastScroll = 0;
+  const nav = document.querySelector('nav');
+  
+  window.addEventListener('scroll', () => {
+    const currentScroll = window.pageYOffset;
+    
+    if (currentScroll <= 0) {
+      nav.style.transform = 'translateY(0)';
+      return;
+    }
+    
+    if (currentScroll > lastScroll && currentScroll > 100) {
+      nav.style.transform = 'translateY(-100%)';
+    } else {
+      nav.style.transform = 'translateY(0)';
+    }
+    
+    lastScroll = currentScroll;
+  });
+</script>
+</body>
+</html>
